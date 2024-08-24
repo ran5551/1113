@@ -19,11 +19,7 @@ public class MyApp {
         SqlSession session=sqlSessionFactory.openSession();
         BookMapper bookMapper=session.getMapper(BookMapper.class);
         List<Book> books = bookMapper.findAll();
-//        for (Book book : books){
-//            System.out.println(book);
-//        }
         books.forEach(System.out::println);
-
         session.close();
     }
 }

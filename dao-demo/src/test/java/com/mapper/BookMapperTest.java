@@ -72,7 +72,7 @@ public class BookMapperTest {
     @Test
     public void deleteBook() {
         BookMapper bookMapper=session.getMapper(BookMapper.class);
-        int rs=bookMapper.deleteBook(1);
+        int rs=bookMapper.deleteBook(2);
         assertEquals(1,rs);
         session.commit();
     }

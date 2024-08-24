@@ -49,12 +49,6 @@ public class BookDaoimpl implements BookDao {
             statement.setDouble(2,book.getPrice());
             statement.setInt(3,book.getQuantity());
             return statement.executeUpdate();
-//            connection.setAutoComait(true);
-//            ps = conn.prepareStatement(sql);
-//            ps.setString(1, book.getTitle());
-//            ps.setDouble(2, book.getPrice());
-//            ps.setInt(3, book.getQuantity());
-//            return ps.executeUpdate();
         }catch (SQLException e) {
             throw new RuntimeException(e);
         }finally {
